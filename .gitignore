@@ -1,6 +1,6 @@
 packer_cache/*
 output-virtualbox-iso/*
 *.box
-vagrant_debian_wheezy_rvm
+vagrant_debian_*
 archive
 log
