@@ -6,10 +6,7 @@ echo "$DATE" >> /home/vagrant/timestamp.txt
 
 # Add shared directory
 mkdir /home/vagrant/shared
-echo "Welcome to the Debian Wheezy Vagrant box!" >> /home/vagrant/shared/README-guest.txt
-echo "This box was created in the guest box." >> /home/vagrant/shared/README-guest.txt
-echo "If you can read this message from your host OS, " >> /home/vagrant/shared/README-guest.txt
-echo "you have confirmation that file syncing works." >> /home/vagrant/shared/README-guest.txt
+chmod 700 /home/vagrant/shared
 
 echo "********************"
 echo "BEGIN apt-get update"
