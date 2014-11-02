@@ -1,0 +1,39 @@
+CHECKLIST FOR NEW RELEASES
+
+1.  Add version numbers to package name and then upload:
+
+DEBIAN-WHEEZY
+rsync -avP -e ssh debian-wheezy-X_X_X.box         
+jhsu802701,vagrant-debian-wheezy@frs.sourceforge.net:/home/frs/project/vagrant-debian-wheezy/
+Check that the new box is available at http://sourceforge.net/projects/vagrant-debian-wheezy/files/
+
+DEBIAN-WHEEZY-RVM
+rsync -avP -e ssh debian-wheezy-rvm-X_X_X.box         
+jhsu802701,vagrant-debian-wheezy-rvm@frs.sourceforge.net:/home/frs/project/vagrant-debian-wheezy-rvm/
+Check that the new box is available at http://sourceforge.net/projects/vagrant-debian-wheezy-rvm/files/
+
+2.  Update changelog.txt
+
+DEBIAN-WHEEZY: at https://github.com/jhsu802701/vagrant_debian_wheezy
+
+DEBIAN-WHEEZY-RVM: at https://github.com/jhsu802701/vagrant_debian_wheezy_rvm
+
+3.  Add the new version at Vagrant Cloud, and set the new provider as "virtualbox", set the SourceForge URL, and 
+release the new version.
+
+DEBIAN-WHEEZY
+https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy
+http://downloads.sourceforge.net/project/vagrant-debian-wheezy/debian-wheezy-X_X_X.box?r=&ts=1414345425&use_mirror=hivelocity
+
+DEBIAN-WHEEZY-RVM
+https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy-rvm
+http://downloads.sourceforge.net/project/vagrant-debian-wheezy-rvm/debian-wheezy-rvm-X_X_X.box?r=&ts=1414345425&use_mirror=hivelocity
+Release the new version
+
+4.  In the vagrant_debian_* repository, update the box_url to the VagrantCloud URL of the new box.
+
+DEBIAN-WHEEZY
+vagrant_debian_wheezy
+
+DEBIAN-WHEEZY-RVM
+vagrant_debian_wheezy_rvm
