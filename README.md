@@ -15,3 +15,9 @@ Debian Wheezy (Minimal)
 Box generating script: min.sh
 Vagrant Cloud URL: https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy
 Vagrant setup served: https://github.com/jhsu802701/vagrant_debian_wheezy
+
+Debian Wheezy With RVM
+----------------------
+Box generating script: ror.sh
+Vagrant Cloud URL: https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy-rvm
+Vagrant setup served: https://github.com/jhsu802701/vagrant_debian_wheezy_rvm

@@ -10,7 +10,7 @@ DEBIAN-WHEEZY-RVM
 rsync -avP -e ssh debian-wheezy-rvm-X_X_X.box jhsu802701@frs.sourceforge.net:/home/frs/project/vagrant-debian-wheezy-rvm
 Check that the new box is available at http://sourceforge.net/projects/vagrant-debian-wheezy-rvm/files/
 
-2.  Update changelog.txt
+2.  Update changelog.txt in the Vagrant setup
 
 DEBIAN-WHEEZY: at https://github.com/jhsu802701/vagrant_debian_wheezy
 
@@ -27,10 +27,12 @@ DEBIAN-WHEEZY-RVM
 https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy-rvm
 http://downloads.sourceforge.net/project/vagrant-debian-wheezy-rvm/debian-wheezy-rvm-X_X_X.box?r=&ts=1414345425&use_mirror=hivelocity
 
-4.  In the vagrant_debian_* repository, update the box_url to the VagrantCloud URL of the new box.
+4.  In the vagrant_debian_* setup, update the box_url to the VagrantCloud URL of the new box.
 
 DEBIAN-WHEEZY
 vagrant_debian_wheezy
+https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy/versions/X/providers/virtualbox.box
 
 DEBIAN-WHEEZY-RVM
 vagrant_debian_wheezy_rvm
+https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy-rvm/versions/X/providers/virtualbox.box
