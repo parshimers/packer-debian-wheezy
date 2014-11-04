@@ -13,11 +13,15 @@ enter the command "sh install_new_box.sh" to install and log in to the new Vagra
 Debian Wheezy (Minimal)
 -----------------------
 Box generating script: min.sh
+<br>
 Vagrant Cloud URL: https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy
+<br>
 Vagrant setup served: https://github.com/jhsu802701/vagrant_debian_wheezy
 
 Debian Wheezy With RVM
 ----------------------
 Box generating script: ror.sh
+<br>
 Vagrant Cloud URL: https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy-rvm
+<br>
 Vagrant setup served: https://github.com/jhsu802701/vagrant_debian_wheezy_rvm
