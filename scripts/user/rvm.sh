@@ -3,7 +3,7 @@
 # Install RVM (Ruby on Rails)
 echo "*************************"
 echo "BEGIN installation of RVM"
-command curl -sSL https://rvm.io/mpapis.asc | gpg --import - # Provides the necessary key
+gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 cd /home/vagrant && \curl -sSL https://get.rvm.io | bash -s stable --ruby --rails
 rvm -v
 cd /home/vagrant && source ~/.rvm/scripts/rvm;
