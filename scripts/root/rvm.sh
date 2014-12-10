@@ -12,3 +12,6 @@ apt-get install -y build-essential openssl libreadline6 libreadline6-dev git-cor
 apt-get install -y g++ ssh libpq-dev postgresql libgtkmm-2.4 libnotify-bin dbus
 apt-get install -y python # Necessary for installing node.js
 apt-get install -y redis-server # Some Rails apps use Redis
+
+# Provides authentication for installing RVM
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3; 
