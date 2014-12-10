@@ -8,8 +8,11 @@ cd /home/vagrant && \curl -sSL https://get.rvm.io | bash -s stable --ruby --rail
 rvm -v
 cd /home/vagrant && source ~/.rvm/scripts/rvm;
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc;
-rvm use ruby
+rvm install ruby --latest
+rvm install ruby 2.0.0
+rvm use ruby --latest
 ruby -v
+rails -v
 echo "FINISHED installation of RVM"
 echo "****************************"
 
@@ -19,6 +22,7 @@ echo "BEGIN installation of node.js"
 cd /home/vagrant && curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash
 source ~/.profile
 nvm --version
+nvm install stable
 nvm use stable
 node -v
 echo "FINISHED installation of node.js"
