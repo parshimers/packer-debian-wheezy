@@ -1,31 +1,25 @@
 #!/bin/bash
 
-# Install RVM
-gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3;
+# Install RVM (Ruby on Rails)
 echo "*************************"
 echo "BEGIN installation of RVM"
-cd /home/vagrant && curl -L get.rvm.io | bash -s stable --rails;
-echo "FINISHED installation of RVM"
-echo "****************************"
+command curl -sSL https://rvm.io/mpapis.asc | gpg --import - # Provides the necessary key
+cd /home/vagrant && \curl -sSL https://get.rvm.io | bash -s stable --ruby --rails
+rvm -v
 cd /home/vagrant && source ~/.rvm/scripts/rvm;
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc;
-
-rvm -v
+rvm use ruby
 ruby -v
-rails -v
+echo "FINISHED installation of RVM"
+echo "****************************"
 
-# Install node.js
+# Install NVM (node.js)
 echo "*****************************"
 echo "BEGIN installation of node.js"
-mkdir /home/vagrant/node;
-git clone https://github.com/joyent/node.git /home/vagrant/node;
-cd /home/vagrant/node && ./configure;
-cd /home/vagrant/node && make;
-cd /home/vagrant/node && make test; # pseudoRandomBytes error
-cd /home/vagrant/node && sudo make install;
+cd /home/vagrant && curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash
+source ~/.profile
+nvm --version
+nvm use stable
+node -v
 echo "FINISHED installation of node.js"
 echo "********************************"
-
-rvm -v
-ruby -v
-rails -v
