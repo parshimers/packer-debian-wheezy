@@ -5,9 +5,7 @@ echo "*************************"
 echo "BEGIN installation of RVM"
 gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 cd /home/vagrant && \curl -sSL https://get.rvm.io | bash -s stable --ruby --rails
-rvm -v
-cd /home/vagrant && source ~/.rvm/scripts/rvm;
-echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc;
+
 echo "FINISHED installation of RVM"
 echo "****************************"
 
@@ -15,27 +13,38 @@ echo "****************************"
 echo "*****************************"
 echo "BEGIN installation of node.js"
 cd /home/vagrant && curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash
-source ~/.nvm/nvm.sh
-echo "source ~/.nvm/nvm.sh" >> ~/.bashrc;
 echo "FINISHED installation of node.js"
 echo "********************************"
 
+echo
 echo "******************************"
 echo "BEGIN setting up Node and Ruby"
+echo
+echo "Activating NVM and then RVM at startup"
+echo "RVM must be activated SECOND."
+echo "This ensures that the $PATH environmental variable lists the path"
+echo "to RVM first.  If the first portion of the $PATH environmental"
+echo "variable does NOT point to RVM, a PATH error results."
+. ~/.nvm/nvm.sh # Activate NVM
+echo ". ~/.nvm/nvm.sh" >> ~/.bashrc; # Activate NVM at startup
+nvm --version # Display the installed version of NVM
+nvm install stable # Install latest stable version of node.js
+nvm use stable # Activate latest stable version of node.js
+node -v # Display the version number of Ruby
+NODE_VERSION="$(node -v)" # Get the version number of node.js
+echo "nvm use ${NODE_VERSION}" >> ~/.bashrc; # Activate node.js at startup
 
-# Set up Node first and Ruby second.
-# This ensures that the $PATH environmental variable lists the path to
-# RVM first.  If the first portion of the $PATH environmental variable 
-# does NOT point to RVM, a PATH error results.
-nvm --version
-nvm install stable
-nvm use stable
-node -v
+cd /home/vagrant && source ~/.rvm/scripts/rvm; # Activate RVM
+echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc; # Activate RVM at startup
+rvm -v # Show installed version of RVM
+rvm install ruby --latest # Install the latest stable version of Ruby
+rvm install ruby 2.0.0 # Install Ruby 2.0.0 (used in many projects)
+rvm use ruby --latest # Set the latest stable version of Ruby as the default
+ruby -v # Display the version number of Ruby
+rails -v # Get the version number of Ruby
 
-rvm install ruby --latest
-rvm install ruby 2.0.0
-rvm use ruby --latest
-ruby -v
-rails -v
+# Must provide this path to the path variable to avoid getting an error
+# message
+echo "PATH=/home/vagrant/.rvm/gems/$RUBY_VERSION/bin:$PATH" >> ~/.bashrc;
 echo "FINISHED setting up Node and Ruby"
 echo "*********************************"
