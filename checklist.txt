@@ -16,23 +16,4 @@ DEBIAN-WHEEZY: at https://github.com/jhsu802701/vagrant_debian_wheezy
 
 DEBIAN-WHEEZY-RVM: at https://github.com/jhsu802701/vagrant_debian_wheezy_rvm
 
-3.  Add the new version at Vagrant Cloud, and set the new provider as "virtualbox", set the SourceForge URL, and 
-release the new version.
-
-DEBIAN-WHEEZY
-https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy
-http://downloads.sourceforge.net/project/vagrant-debian-wheezy/debian-wheezy-X_X_X.box?r=&ts=1414345425&use_mirror=hivelocity
-
-DEBIAN-WHEEZY-RVM
-https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy-rvm
-http://downloads.sourceforge.net/project/vagrant-debian-wheezy-rvm/debian-wheezy-rvm-X_X_X.box?r=&ts=1414345425&use_mirror=hivelocity
-
-4.  In the vagrant_debian_* setup, update the box_url to the VagrantCloud URL of the new box.
-
-DEBIAN-WHEEZY
-vagrant_debian_wheezy
-https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy/versions/X/providers/virtualbox.box
-
-DEBIAN-WHEEZY-RVM
-vagrant_debian_wheezy_rvm
-https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy-rvm/versions/X/providers/virtualbox.box
+3.  In the vagrant_debian_* setup, update the box_url to the VagrantCloud URL of the new box.
