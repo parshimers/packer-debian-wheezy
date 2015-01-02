@@ -3,6 +3,7 @@
 # Add time stamp
 DATE=`date +%Y_%m%d_%H%M`
 echo "$DATE" >> /home/vagrant/timestamp.txt
+chown vagrant:vagrant /home/vagrant/timestamp.txt
 
 # Add shared directory
 mkdir /home/vagrant/shared

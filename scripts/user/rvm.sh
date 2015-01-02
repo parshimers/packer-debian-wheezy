@@ -12,7 +12,8 @@ echo "****************************"
 # Install NVM (node.js)
 echo "*****************************"
 echo "BEGIN installation of node.js"
-cd /home/vagrant && curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash
+git clone https://github.com/creationix/nvm.git /home/vagrant/.nvm
+cd /home/vagrant/.nvm && git checkout `git describe --abbrev=0 --tags`
 echo "FINISHED installation of node.js"
 echo "********************************"
 
