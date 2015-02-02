@@ -40,6 +40,9 @@ apt-get install -y postgresql-$PG_VERSION postgresql-contrib-$PG_VERSION
 pg_dropcluster $PG_VERSION main --stop
 pg_createcluster $PG_VERSION main --start
 sudo -u postgres psql -l
+
+# Configure PostgreSQL so that database is accessible from the host
+echo "CONFIGURE PostgreSQL"
 PG_CONF="/etc/postgresql/$PG_VERSION/main/postgresql.conf"
 PG_HBA="/etc/postgresql/$PG_VERSION/main/pg_hba.conf"
 PG_DIR="/var/lib/postgresql/$PG_VERSION/main"
