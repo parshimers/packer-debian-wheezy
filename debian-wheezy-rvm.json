@@ -1,7 +1,7 @@
 {
     "variables": {
-        "debian_version": "7.7.0",
-        "iso_checksum": "532df460f6108d97f1198999b519c5ca2b8de53eac16cfdd0787c46fa7c04a50dce27158db9e782acab6416a3c5ac071af24b1f6ab68748aa91e70a8caf6282f"
+        "debian_version": "7.8.0",
+        "iso_checksum": "c22be055c31fdd9a93afd850f47776e91e72f1deb697061850338e1245f4b6b1934c3a2a041e1002b2c103f5fe0d52f6ef26d12c528b99d4ffdd7fc67b4a3de1"
     },
   "builders": [
     {
@@ -34,7 +34,7 @@
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
-      "ssh_wait_timeout": "10000s",
+      "ssh_wait_timeout": "20000s",
       "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
@@ -60,6 +60,7 @@
         "scripts/root/vagrant.sh",
         "scripts/root/puppet.sh",
         "scripts/root/chef.sh",
+        "scripts/root/postgresql.sh"
         "scripts/root/rvm.sh"
       ]
     },
