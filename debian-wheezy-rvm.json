@@ -60,7 +60,7 @@
         "scripts/root/vagrant.sh",
         "scripts/root/puppet.sh",
         "scripts/root/chef.sh",
-        "scripts/root/postgresql.sh"
+        "scripts/root/postgresql.sh",
         "scripts/root/rvm.sh"
       ]
     },
