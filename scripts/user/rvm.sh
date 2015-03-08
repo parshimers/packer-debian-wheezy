@@ -47,5 +47,8 @@ rails -v # Get the version number of Ruby
 # Must provide this path to the path variable to avoid getting an error
 # message
 echo "PATH=/home/vagrant/.rvm/gems/$RUBY_VERSION/bin:$PATH" >> ~/.bashrc;
+
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh # Install Heroku Toolbelt
+
 echo "FINISHED setting up Node and Ruby"
 echo "*********************************"

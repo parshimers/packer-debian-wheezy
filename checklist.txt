@@ -3,12 +3,10 @@ CHECKLIST FOR NEW RELEASES
 1.  Add version numbers to package name and then upload:
 
 DEBIAN-WHEEZY
-rsync -avP -e ssh debian-wheezy-X_X_X.box jhsu802701@frs.sourceforge.net:/home/frs/project/vagrant-debian-wheezy
-Check that the new box is available at http://sourceforge.net/projects/vagrant-debian-wheezy/files/
+URL: http://sourceforge.net/projects/vagrant-debian-wheezy/files/
 
 DEBIAN-WHEEZY-RVM
-rsync -avP -e ssh debian-wheezy-rvm-X_X_X.box jhsu802701@frs.sourceforge.net:/home/frs/project/vagrant-debian-wheezy-rvm
-Check that the new box is available at http://sourceforge.net/projects/vagrant-debian-wheezy-rvm/files/
+URL: http://sourceforge.net/projects/vagrant-debian-wheezy-rvm/files/
 
 2.  Update changelog.txt in the Vagrant setup
 
@@ -16,4 +14,4 @@ DEBIAN-WHEEZY: at https://github.com/jhsu802701/vagrant_debian_wheezy
 
 DEBIAN-WHEEZY-RVM: at https://github.com/jhsu802701/vagrant_debian_wheezy_rvm
 
-3.  In the vagrant_debian_* setup, update the box_url to the VagrantCloud URL of the new box.
+3.  In the vagrant_debian_* setup, update the box_url to the URL of the new box.
