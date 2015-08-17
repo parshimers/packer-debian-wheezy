@@ -23,6 +23,8 @@ echo "************************"
 
 apt-get install -y build-essential
 
+apt-get install -y openjdk-7-jre-headless
+
 # Build the latest Debian kernels
 echo "**********************"
 echo "BEGIN module-assistant"
