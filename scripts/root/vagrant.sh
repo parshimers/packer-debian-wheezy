@@ -24,6 +24,7 @@ echo "************************"
 apt-get install -y build-essential
 
 apt-get install -y openjdk-7-jre-headless
+apt-get install -y unzip
 
 # Build the latest Debian kernels
 echo "**********************"
@@ -55,7 +56,7 @@ echo "***********"
 echo "SET UP KEYS"
 apt-get install -y ca-certificates # Needed for authorized_keys to work
 mkdir -p /home/vagrant/.ssh
-wget 'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub' -O /home/vagrant/.ssh/authorized_keys
+wget 'https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub' -O /home/vagrant/.ssh/authorized_keys
 chown -Rf vagrant. /home/vagrant/.ssh
 chmod 700 /home/vagrant/.ssh
 chmod 600 /home/vagrant/.ssh/authorized_keys
